@@ -58,14 +58,10 @@ while($data=$result->fetch()){
 
         if ($seconds<60 && $minutes==0){
             echo '<span id="since">il y a '.$seconds.' s  </span>';
-        }elseif ($minutes<1){
-            echo '<span id="since">il y a '.$minutes.' minute</span>';
-        }elseif ($minutes<60){
-            echo '<span id="since">il y a '.$minutes.' minutes</span>';
-        }elseif ($hours<1){
-            echo '<span id="since">il y a '.$hours.' heure</span>';
+        }elseif ($minutes<60 && $hours==0){
+            echo '<span id="since">il y a '.$minutes.' mins </span>';
         }elseif ($hours<24){
-            echo '<span id="since">il y a '.$hours.' heures</span>';
+            echo '<span id="since">il y a '.$hours.' h </span>';
         }
 
 

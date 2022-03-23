@@ -1,11 +1,11 @@
 $(document).ready(function() {
     // Ici le DOM est prêt
     //Pour l'actualisation des messages tout les 500 ms
-    setInterval('loadmessages()', 500)
+    setInterval('loadmessages()', 20)
 
-    var mes = $('#contenu')
+    let mes = $('#contenu')
     //traitement du clic sur le boutton Envoyer
-    var button = $('#send')
+    let button = $('#send')
     button.click(function (){
         envoyermessage()
         mes.val('')
@@ -29,13 +29,13 @@ function loadmessages(){
 //fonction permettant l'envoi d'un message dans la bdd via Ajax
 function envoyermessage(){
 
-    var httpRequest = new XMLHttpRequest()
+    let httpRequest = new XMLHttpRequest()
 
     //On récupère l'auteur
-    var author= $("#auteur").val()
+    let author= $("#auteur").val()
 
     //On récupère le contenu du message
-    var content= $("#contenu").val()
+    let content= $("#contenu").val()
 
 
     httpRequest.open('GET','enregistrer.php?auteur='+author+'&contenu='+content,true)

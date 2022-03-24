@@ -2,9 +2,26 @@
 
 *{
     font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+#since{
+    font-size: smaller;
+}
+
+#pseudo{
+    font-weight: bold;
 }
 
 .boxchat{
-    background-color: blue ;
+    display: flex;
+    flex-direction: column;
+    background-color: #969696;
+    border : solid;
 }
 
+#messages{
+
+
+
+}

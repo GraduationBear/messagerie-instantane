@@ -2,7 +2,8 @@
 
 *{
     font-family: 'Source Sans Pro', sans-serif;
-
+    padding: 0;
+    margin: 0;
 }
 
 #since{
@@ -11,17 +12,37 @@
 
 #pseudo{
     font-weight: bold;
+    font-size:18px
 }
 
 .boxchat{
     display: flex;
     flex-direction: column;
-    background-color: #969696;
-    border : solid;
+    background-color: rgba(150, 150, 150, 0.5);
+
 }
 
-#messages{
+.boxchat:nth-child(2n+1){
+    background-color: rgba(136, 136, 136, 0.5);
+}
 
+#discussion{
+    height: 500px;
+    width: 400px;
+    overflow-y:scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 
+}
 
+#chat{
+    display: flex;
+    justify-content: center;
+}
+
+#haut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

@@ -9,12 +9,20 @@
 </head>
 <body>
 <div id="chat">
-    <label for="auteur">Pseudo </label><input id="auteur">
-    <section id="messages">
-        Chargement...
-    </section>
-    <label for="contenu">Message </label><input id="contenu" maxlength="500" placeholder="Entrez votre message...">
-    <button id="send">Envoyer</button>
+    <form action="#">
+        <div id="haut">
+            <label for="auteur">Pseudo </label><input id="auteur" required>
+        </div>
+        <div id="discussion">
+            Chargement...
+        </div>
+        <div id="bas">
+            <label for="contenu">Message </label><input id="contenu" maxlength="500" placeholder="Entrez votre message...">
+            <button id="send">Envoyer</button>
+        </div>
+
+    </form>
+
 </div>
 
 

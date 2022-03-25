@@ -1,5 +1,10 @@
+
+
 $(document).ready(function() {
     // Ici le DOM est prêt
+
+    var objDiv = $('#discussion');
+    objDiv.scrollTop = objDiv.scrollHeight;
     //Pour l'actualisation des messages tout les 500 ms
     setInterval('loadmessages()', 20)
 
@@ -23,7 +28,7 @@ $(document).ready(function() {
 
 //fonction permettant la récupération des 10 derniers messages dans la bdd
 function loadmessages(){
-    $('#messages').load('recuperer.php')
+    $('#discussion').load('recuperer.php')
 }
 
 //fonction permettant l'envoi d'un message dans la bdd via Ajax

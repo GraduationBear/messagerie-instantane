@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +14,12 @@
 </head>
 <body>
 
-<h1>Entrez dans le chat</h1>
+<h1>Connexion</h1>
 
 <form method="post" action="afficher.php">
-    <button name="valider" type="submit">
+    <p>Identifiant <input name="identifiant"></p>
+    <p>Mot de passe<input name="mdp"></p>
+    <button name="connexion">
         Entrer !
     </button>
 </form>

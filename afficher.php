@@ -8,16 +8,27 @@
     <script src="app.js"></script>
 </head>
 <body>
+<nav id="navbar">
+
+    <ul id="links">
+        <li><a href="#">Manga</a></li>
+        <li><a href="#">Informatique</a></li>
+        <li><a href="#">Politique</a></li>
+        <li><a href="#">Détente</a></li>
+        <li><a href="#">Déconnexion</a></li>
+    </ul>
+
+</nav>
 <div id="chat">
     <form action="#">
         <div id="haut">
-            <label for="auteur">Pseudo </label><input id="auteur" required>
+            <label for="auteur">Pseudo</label><input id="auteur" required>
         </div>
         <div id="discussion">
             Chargement...
         </div>
         <div id="bas">
-            <label for="contenu">Message </label><input id="contenu" maxlength="500" placeholder="Entrez votre message...">
+            <label for="contenu">Message</label><input id="contenu" maxlength="500" placeholder="Entrez votre message...">
             <button id="send">Envoyer</button>
         </div>
 

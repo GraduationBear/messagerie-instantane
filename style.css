@@ -4,6 +4,10 @@
     font-family: 'Source Sans Pro', sans-serif;
     padding: 0;
     margin: 0;
+
+}
+body{
+    background-color: #003049;
 }
 
 #since{
@@ -12,37 +16,97 @@
 
 #pseudo{
     font-weight: bold;
-    font-size:18px
+    font-size:18px;
 }
 
 .boxchat{
     display: flex;
     flex-direction: column;
-    background-color: rgba(150, 150, 150, 0.5);
+    background-color: #fcbf49;
+    padding:7px;
+    margin:4px;
+    border-radius: 17px;
 
 }
 
 .boxchat:nth-child(2n+1){
-    background-color: rgba(136, 136, 136, 0.5);
+    background-color: #f77f00;
 }
 
 #discussion{
-    height: 500px;
+
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    height: 570px;
     width: 400px;
-    overflow-y:scroll;
-    scrollbar-color: rebeccapurple green;
-    scrollbar-width: thin;
+    overflow:scroll;
+
+    background-color: #eae2b7;
 
 }
 
 #chat{
+    background-color: #003049;
     display: flex;
     justify-content: center;
 }
 
 #haut{
+
+    background-color: #003049;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+#bas{
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #d62828;
+}
+
+#chat label{
+    color: white;
+}
+#links label, input, button{
+
+    margin:6px ;
+}
+
+
+#links{
+
+    padding: 1% 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#navbar{
+
+    background-color: #d62828;
+    margin-bottom: 10px;
+}
+
+
+#links li{
+
+    list-style:none;
+}
+#links a:hover{
+    color: #f77f00;
+}
+
+
+
+#links a{
+    font-weight: bolder;
+    font-size: 18px;
+    color:white;
+    outline: none;
+    text-decoration: none;
 }

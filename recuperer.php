@@ -2,10 +2,14 @@
 
 require 'db.php';
 
+
+
+
+
 //Requête permettant de récupèrer les 10 derniers messages
 $requete2='SELECT horaire, auteur,content FROM (SELECT horaire, auteur,content FROM chat ORDER BY horaire DESC LIMIT 10)Var1
 ORDER BY horaire ASC';
-
+//WHERE salle=\''.$_COOKIE['salle'].'\'
 try {
     /** @var $linkpdo */
     $result=$linkpdo->query($requete2);
@@ -63,8 +67,6 @@ while($data=$result->fetch()){
         }elseif ($hours<24){
             echo '<span id="since">il y a '.$hours.' h </span>';
         }
-
-
 
         echo '<span id="pseudo">'.$data['auteur'].'</span>
         <span id="message">'.$data['content'].'</span>

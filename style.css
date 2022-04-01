@@ -32,23 +32,40 @@ body{
 .boxchat:nth-child(2n+1){
     background-color: #f77f00;
 }
+#container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#info{
+    display: flex;
+
+}
+#info p{
+    color: white;
+    font-size: 24px;
+}
 
 #discussion{
-
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
     height: 570px;
     width: 400px;
     overflow:scroll;
-
+    margin-top: 10px;
     background-color: #eae2b7;
 
 }
 
 #chat{
-    background-color: #003049;
     display: flex;
+    flex-direction: column;
+    align-items: center ;
     justify-content: center;
+
 }
 
 #haut{
@@ -67,14 +84,14 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 400px;
     background-color: #d62828;
 }
 
 #chat label{
     color: white;
 }
-#links label, input, button{
-
+#links label{
     margin:6px ;
 }
 
@@ -104,9 +121,37 @@ body{
 
 
 #links a{
+    cursor: pointer;
     font-weight: bolder;
     font-size: 18px;
     color:white;
     outline: none;
     text-decoration: none;
+}
+
+#connexion{
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#connexion label, h1{
+    color: white;
+}
+
+#error{
+    background-color: #d62828;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#error p{
+    color: white;
+}
+
+h2{
+    color: chartreuse;
 }

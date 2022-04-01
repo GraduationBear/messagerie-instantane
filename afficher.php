@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    setcookie('pseudo', $_SESSION['pseudo']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,31 +16,35 @@
 <nav id="navbar">
 
     <ul id="links">
-        <li><a href="#">Manga</a></li>
-        <li><a href="#">Informatique</a></li>
-        <li><a href="#">Politique</a></li>
-        <li><a href="#">Détente</a></li>
-        <li><a href="#">Déconnexion</a></li>
+        <li><a id="Manga">Manga</a></li>
+        <li><a id="Informatique">Informatique</a></li>
+        <li><a id="Politique">Politique</a></li>
+        <li><a id="Détente">Détente</a></li>
+        <li><button onclick="window.location.href = 'logout.php'">Déconnexion</button></li>
     </ul>
-
 </nav>
-<div id="chat">
-    <form action="#">
-        <div id="haut">
-            <label for="auteur">Pseudo</label><input id="auteur" required>
-        </div>
-        <div id="discussion">
-            Chargement...
-        </div>
-        <div id="bas">
-            <label for="contenu">Message</label><input id="contenu" maxlength="500" placeholder="Entrez votre message...">
-            <button id="send">Envoyer</button>
-        </div>
 
-    </form>
+
+
+<div id="container">
+    <div id="info">
+        <?php
+            echo '<p>Bonjour '.$_SESSION['pseudo'].' !<br>';
+
+        ?>
+    </div>
+    <div id="chat">
+
+            <div id="discussion">
+                Chargement...
+            </div>
+            <div id="bas">
+                <label for="contenu">Message</label><input id="contenu" maxlength="500" placeholder="Entrez votre message...">
+                <button id="send">Envoyer</button>
+            </div>
+    </div>
 
 </div>
-
 
 </body>
 

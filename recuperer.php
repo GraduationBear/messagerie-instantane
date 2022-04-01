@@ -2,13 +2,27 @@
 
 require 'db.php';
 
+if(!isset($_GET['salle']) and isset($_COOKIE['salle'])){
+    $salle=$_COOKIE['salle'];
+}elseif(!isset($_GET['salle']) and !isset($_COOKIE['salle'])){
+    setcookie('salle', 'Manga');
+    $salle=$_COOKIE['salle'];
+}elseif(isset($_GET['salle']) and isset($_COOKIE['salle'])){
+    setcookie('salle', $_GET['salle']);
+    $salle=$_COOKIE['salle'];
+}
 
 
+
+$requete2='SELECT horaire,auteur,content FROM (
+   SELECT horaire,auteur,content FROM chat WHERE salle=\''.$salle.'\' ORDER BY horaire DESC LIMIT 10
+)Var1
+   ORDER BY horaire ASC';
 
 
 //Requête permettant de récupèrer les 10 derniers messages
-$requete2='SELECT horaire, auteur,content FROM (SELECT horaire, auteur,content FROM chat ORDER BY horaire DESC LIMIT 10)Var1
-ORDER BY horaire ASC';
+//$requete2='SELECT horaire, auteur,content FROM (SELECT horaire, auteur,content FROM chat ORDER BY horaire DESC LIMIT 10)Var1
+//ORDER BY horaire ASC';
 //WHERE salle=\''.$_COOKIE['salle'].'\'
 try {
     /** @var $linkpdo */
